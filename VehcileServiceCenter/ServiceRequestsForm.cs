@@ -78,6 +78,12 @@ namespace VehicleServiceCenter
 
         private void btnAddRequest_Click(object sender, EventArgs e)
         {
+            using var form = new ServiceRequestEditForm();
+
+            if (form.ShowDialog(this) == DialogResult.OK)
+            {
+                LoadServiceRequests();
+            }
 
         }
 
