@@ -136,5 +136,11 @@ ORDER BY RequestDate DESC, RequestID DESC;";
         {
 
         }
+
+        private void btnServiceRequests_Click(object sender, EventArgs e)
+        {
+            using var form = new ServiceRequestsForm();
+            form.ShowDialog(this);
+        }
     }
 }

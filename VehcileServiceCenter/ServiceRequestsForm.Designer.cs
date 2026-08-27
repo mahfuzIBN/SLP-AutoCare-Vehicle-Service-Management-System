@@ -1,6 +1,6 @@
 ﻿namespace VehicleServiceCenter
 {
-    partial class CustomersForm
+    partial class ServiceRequestsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlSidebar = new Panel();
             btnLogout = new Button();
             pnlLogoutDivider = new Panel();
@@ -42,15 +42,15 @@
             btnCustomers = new Button();
             lblSidebarSubtitle = new Label();
             lblSidebarBrand = new Label();
-            lblCustomersTitle = new Label();
-            lblCustomersSubtitle = new Label();
-            txtSearchCustomer = new TextBox();
-            btnAddCustomer = new Button();
-            dgvCustomers = new DataGridView();
-            btnEditCustomer = new Button();
-            btnDeleteCustomer = new Button();
+            lblTitle = new Label();
+            lblSubtitle = new Label();
+            txtSearchRequest = new TextBox();
+            btnAddRequest = new Button();
+            dgvServiceRequests = new DataGridView();
+            btnEditRequest = new Button();
+            btnDeleteRequest = new Button();
             pnlSidebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvServiceRequests).BeginInit();
             SuspendLayout();
             // 
             // pnlSidebar
@@ -71,8 +71,7 @@
             pnlSidebar.Location = new Point(0, 0);
             pnlSidebar.Name = "pnlSidebar";
             pnlSidebar.Size = new Size(240, 653);
-            pnlSidebar.TabIndex = 1;
-            pnlSidebar.Paint += pnlSidebar_Paint;
+            pnlSidebar.TabIndex = 3;
             // 
             // btnLogout
             // 
@@ -85,7 +84,7 @@
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(15, 579);
+            btnLogout.Location = new Point(15, 1702);
             btnLogout.Name = "btnLogout";
             btnLogout.Padding = new Padding(15, 0, 0, 0);
             btnLogout.Size = new Size(210, 42);
@@ -98,7 +97,7 @@
             // 
             pnlLogoutDivider.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             pnlLogoutDivider.BackColor = Color.Gainsboro;
-            pnlLogoutDivider.Location = new Point(20, 570);
+            pnlLogoutDivider.Location = new Point(20, 1681);
             pnlLogoutDivider.Name = "pnlLogoutDivider";
             pnlLogoutDivider.Size = new Size(200, 1);
             pnlLogoutDivider.TabIndex = 5;
@@ -178,7 +177,7 @@
             // 
             // btnServiceRequests
             // 
-            btnServiceRequests.BackColor = Color.DarkSlateGray;
+            btnServiceRequests.BackColor = Color.Teal;
             btnServiceRequests.Cursor = Cursors.Hand;
             btnServiceRequests.FlatAppearance.BorderSize = 0;
             btnServiceRequests.FlatAppearance.MouseDownBackColor = Color.DarkCyan;
@@ -216,7 +215,7 @@
             // 
             // btnCustomers
             // 
-            btnCustomers.BackColor = Color.Teal;
+            btnCustomers.BackColor = Color.DarkSlateGray;
             btnCustomers.Cursor = Cursors.Hand;
             btnCustomers.FlatAppearance.BorderSize = 0;
             btnCustomers.FlatAppearance.MouseDownBackColor = Color.DarkCyan;
@@ -257,146 +256,145 @@
             lblSidebarBrand.Text = "SLP AUTOCARE";
             lblSidebarBrand.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // lblCustomersTitle
+            // lblTitle
             // 
-            lblCustomersTitle.AutoSize = true;
-            lblCustomersTitle.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCustomersTitle.ForeColor = Color.DarkSlateGray;
-            lblCustomersTitle.Location = new Point(290, 35);
-            lblCustomersTitle.Name = "lblCustomersTitle";
-            lblCustomersTitle.Size = new Size(205, 50);
-            lblCustomersTitle.TabIndex = 2;
-            lblCustomersTitle.Text = "Customers";
+            lblTitle.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.DarkSlateGray;
+            lblTitle.Location = new Point(290, 35);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(320, 40);
+            lblTitle.TabIndex = 4;
+            lblTitle.Text = "Service Requests";
             // 
-            // lblCustomersSubtitle
+            // lblSubtitle
             // 
-            lblCustomersSubtitle.AutoSize = true;
-            lblCustomersSubtitle.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCustomersSubtitle.ForeColor = Color.DimGray;
-            lblCustomersSubtitle.Location = new Point(292, 75);
-            lblCustomersSubtitle.Name = "lblCustomersSubtitle";
-            lblCustomersSubtitle.Size = new Size(242, 23);
-            lblCustomersSubtitle.TabIndex = 3;
-            lblCustomersSubtitle.Text = "Manage customer information";
+            lblSubtitle.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSubtitle.ForeColor = Color.DimGray;
+            lblSubtitle.Location = new Point(290, 78);
+            lblSubtitle.Name = "lblSubtitle";
+            lblSubtitle.Size = new Size(300, 25);
+            lblSubtitle.TabIndex = 5;
+            lblSubtitle.Text = "Manage service requests";
+            lblSubtitle.TextAlign = ContentAlignment.MiddleLeft;
+            lblSubtitle.Click += blSubtitle_Click;
             // 
-            // txtSearchCustomer
+            // txtSearchRequest
             // 
-            txtSearchCustomer.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSearchCustomer.Location = new Point(290, 120);
-            txtSearchCustomer.Multiline = true;
-            txtSearchCustomer.Name = "txtSearchCustomer";
-            txtSearchCustomer.PlaceholderText = "Search by name, phone or email...";
-            txtSearchCustomer.Size = new Size(430, 32);
-            txtSearchCustomer.TabIndex = 4;
-            txtSearchCustomer.TextChanged += txtSearchCustomer_TextChanged;
+            txtSearchRequest.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearchRequest.Location = new Point(290, 125);
+            txtSearchRequest.Multiline = true;
+            txtSearchRequest.Name = "txtSearchRequest";
+            txtSearchRequest.PlaceholderText = "Search by service type or status...";
+            txtSearchRequest.Size = new Size(430, 32);
+            txtSearchRequest.TabIndex = 6;
+            txtSearchRequest.TextChanged += txtSearchRequest_TextChanged;
             // 
-            // btnAddCustomer
+            // btnAddRequest
             // 
-            btnAddCustomer.BackColor = Color.Teal;
-            btnAddCustomer.Cursor = Cursors.Hand;
-            btnAddCustomer.FlatAppearance.BorderSize = 0;
-            btnAddCustomer.FlatAppearance.MouseOverBackColor = Color.DarkCyan;
-            btnAddCustomer.FlatStyle = FlatStyle.Flat;
-            btnAddCustomer.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddCustomer.ForeColor = Color.White;
-            btnAddCustomer.Location = new Point(850, 116);
-            btnAddCustomer.Name = "btnAddCustomer";
-            btnAddCustomer.Size = new Size(170, 40);
-            btnAddCustomer.TabIndex = 5;
-            btnAddCustomer.Text = "+ Add Customer";
-            btnAddCustomer.UseVisualStyleBackColor = false;
-            btnAddCustomer.Click += btnAddCustomer_Click;
+            btnAddRequest.BackColor = Color.Teal;
+            btnAddRequest.Cursor = Cursors.Hand;
+            btnAddRequest.FlatAppearance.BorderSize = 0;
+            btnAddRequest.FlatAppearance.MouseOverBackColor = Color.DarkCyan;
+            btnAddRequest.FlatStyle = FlatStyle.Flat;
+            btnAddRequest.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddRequest.ForeColor = Color.White;
+            btnAddRequest.Location = new Point(800, 120);
+            btnAddRequest.Name = "btnAddRequest";
+            btnAddRequest.Size = new Size(160, 40);
+            btnAddRequest.TabIndex = 7;
+            btnAddRequest.Text = "+ Add Request";
+            btnAddRequest.UseVisualStyleBackColor = false;
+            btnAddRequest.Click += btnAddRequest_Click;
             // 
-            // dgvCustomers
+            // dgvServiceRequests
             // 
-            dgvCustomers.AllowUserToAddRows = false;
-            dgvCustomers.AllowUserToDeleteRows = false;
-            dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvCustomers.BackgroundColor = Color.White;
-            dgvCustomers.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.DarkSlateGray;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dgvCustomers.ColumnHeadersHeight = 35;
-            dgvCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.Teal;
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvCustomers.DefaultCellStyle = dataGridViewCellStyle4;
-            dgvCustomers.Location = new Point(290, 180);
-            dgvCustomers.MultiSelect = false;
-            dgvCustomers.Name = "dgvCustomers";
-            dgvCustomers.ReadOnly = true;
-            dgvCustomers.RowHeadersVisible = false;
-            dgvCustomers.RowHeadersWidth = 51;
-            dgvCustomers.RowTemplate.Height = 35;
-            dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCustomers.Size = new Size(730, 390);
-            dgvCustomers.TabIndex = 6;
+            dgvServiceRequests.AllowUserToAddRows = false;
+            dgvServiceRequests.AllowUserToDeleteRows = false;
+            dgvServiceRequests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvServiceRequests.BackgroundColor = Color.White;
+            dgvServiceRequests.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvServiceRequests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvServiceRequests.ColumnHeadersHeight = 35;
+            dgvServiceRequests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Teal;
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvServiceRequests.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvServiceRequests.Location = new Point(275, 190);
+            dgvServiceRequests.MultiSelect = false;
+            dgvServiceRequests.Name = "dgvServiceRequests";
+            dgvServiceRequests.ReadOnly = true;
+            dgvServiceRequests.RowHeadersVisible = false;
+            dgvServiceRequests.RowHeadersWidth = 51;
+            dgvServiceRequests.RowTemplate.Height = 35;
+            dgvServiceRequests.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvServiceRequests.Size = new Size(670, 385);
+            dgvServiceRequests.TabIndex = 8;
             // 
-            // btnEditCustomer
+            // btnEditRequest
             // 
-            btnEditCustomer.BackColor = Color.DarkSlateGray;
-            btnEditCustomer.Cursor = Cursors.Hand;
-            btnEditCustomer.FlatAppearance.BorderSize = 0;
-            btnEditCustomer.FlatStyle = FlatStyle.Flat;
-            btnEditCustomer.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEditCustomer.ForeColor = Color.White;
-            btnEditCustomer.Location = new Point(388, 596);
-            btnEditCustomer.Name = "btnEditCustomer";
-            btnEditCustomer.Size = new Size(130, 40);
-            btnEditCustomer.TabIndex = 11;
-            btnEditCustomer.Text = "EDIT";
-            btnEditCustomer.UseVisualStyleBackColor = false;
-            btnEditCustomer.Click += btnEditCustomer_Click;
+            btnEditRequest.BackColor = Color.DarkSlateGray;
+            btnEditRequest.Cursor = Cursors.Hand;
+            btnEditRequest.FlatAppearance.BorderSize = 0;
+            btnEditRequest.FlatStyle = FlatStyle.Flat;
+            btnEditRequest.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditRequest.ForeColor = Color.White;
+            btnEditRequest.Location = new Point(380, 588);
+            btnEditRequest.Name = "btnEditRequest";
+            btnEditRequest.Size = new Size(130, 40);
+            btnEditRequest.TabIndex = 12;
+            btnEditRequest.Text = "EDIT";
+            btnEditRequest.UseVisualStyleBackColor = false;
+            btnEditRequest.Click += btnEditRequest_Click;
             // 
-            // btnDeleteCustomer
+            // btnDeleteRequest
             // 
-            btnDeleteCustomer.BackColor = Color.IndianRed;
-            btnDeleteCustomer.Cursor = Cursors.Hand;
-            btnDeleteCustomer.FlatAppearance.BorderSize = 0;
-            btnDeleteCustomer.FlatStyle = FlatStyle.Flat;
-            btnDeleteCustomer.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDeleteCustomer.ForeColor = Color.White;
-            btnDeleteCustomer.Location = new Point(652, 596);
-            btnDeleteCustomer.Name = "btnDeleteCustomer";
-            btnDeleteCustomer.Size = new Size(130, 40);
-            btnDeleteCustomer.TabIndex = 12;
-            btnDeleteCustomer.Text = "DELETE";
-            btnDeleteCustomer.UseVisualStyleBackColor = false;
-            btnDeleteCustomer.Click += btnDeleteCustomer_Click;
+            btnDeleteRequest.BackColor = Color.IndianRed;
+            btnDeleteRequest.Cursor = Cursors.Hand;
+            btnDeleteRequest.FlatAppearance.BorderSize = 0;
+            btnDeleteRequest.FlatStyle = FlatStyle.Flat;
+            btnDeleteRequest.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeleteRequest.ForeColor = Color.White;
+            btnDeleteRequest.Location = new Point(650, 588);
+            btnDeleteRequest.Name = "btnDeleteRequest";
+            btnDeleteRequest.Size = new Size(130, 40);
+            btnDeleteRequest.TabIndex = 13;
+            btnDeleteRequest.Text = "DELETE";
+            btnDeleteRequest.UseVisualStyleBackColor = false;
+            btnDeleteRequest.Click += btnDeleteRequest_Click;
             // 
-            // CustomersForm
+            // ServiceRequestsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(1182, 653);
-            Controls.Add(btnDeleteCustomer);
-            Controls.Add(btnEditCustomer);
-            Controls.Add(dgvCustomers);
-            Controls.Add(btnAddCustomer);
-            Controls.Add(txtSearchCustomer);
-            Controls.Add(lblCustomersSubtitle);
-            Controls.Add(lblCustomersTitle);
+            Controls.Add(btnDeleteRequest);
+            Controls.Add(btnEditRequest);
+            Controls.Add(dgvServiceRequests);
+            Controls.Add(btnAddRequest);
+            Controls.Add(txtSearchRequest);
+            Controls.Add(lblSubtitle);
+            Controls.Add(lblTitle);
             Controls.Add(pnlSidebar);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "CustomersForm";
+            MinimizeBox = false;
+            Name = "ServiceRequestsForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = " ";
-            Load += CustomersForm_Load;
+            Text = "Service Requests";
+            Load += ServiceRequestsForm_Load;
             pnlSidebar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvServiceRequests).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -404,6 +402,9 @@
         #endregion
 
         private Panel pnlSidebar;
+        private Button btnLogout;
+        private Panel pnlLogoutDivider;
+        private Button btnDashboard;
         private Button btnBilling;
         private Button btnRepairs;
         private Button btnMechanics;
@@ -412,15 +413,12 @@
         private Button btnCustomers;
         private Label lblSidebarSubtitle;
         private Label lblSidebarBrand;
-        private Button btnDashboard;
-        private Panel pnlLogoutDivider;
-        private Button btnLogout;
-        private Label lblCustomersTitle;
-        private Label lblCustomersSubtitle;
-        private TextBox txtSearchCustomer;
-        private Button btnAddCustomer;
-        private DataGridView dgvCustomers;
-        private Button btnEditCustomer;
-        private Button btnDeleteCustomer;
+        private Label lblTitle;
+        private Label lblSubtitle;
+        private TextBox txtSearchRequest;
+        private Button btnAddRequest;
+        private DataGridView dgvServiceRequests;
+        private Button btnEditRequest;
+        private Button btnDeleteRequest;
     }
 }

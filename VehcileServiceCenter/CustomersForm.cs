@@ -201,6 +201,11 @@ namespace VehicleServiceCenter
                     MessageBoxIcon.Error);
             }
         }
+
+        private void pnlSidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

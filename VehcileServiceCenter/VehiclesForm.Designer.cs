@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             pnlSidebar = new Panel();
             btnLogout = new Button();
             pnlLogoutDivider = new Panel();
             btnDashboard = new Button();
             btnBilling = new Button();
-            btnSpareParts = new Button();
             btnRepairs = new Button();
             btnMechanics = new Button();
             btnServiceRequests = new Button();
@@ -50,6 +49,8 @@
             txtSearchVehicle = new TextBox();
             lblCustomersSubtitle = new Label();
             lblCustomersTitle = new Label();
+            button1 = new Button();
+            panel1 = new Panel();
             pnlSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvVehicles).BeginInit();
             SuspendLayout();
@@ -57,11 +58,12 @@
             // pnlSidebar
             // 
             pnlSidebar.BackColor = Color.DarkSlateGray;
+            pnlSidebar.Controls.Add(button1);
+            pnlSidebar.Controls.Add(panel1);
             pnlSidebar.Controls.Add(btnLogout);
             pnlSidebar.Controls.Add(pnlLogoutDivider);
             pnlSidebar.Controls.Add(btnDashboard);
             pnlSidebar.Controls.Add(btnBilling);
-            pnlSidebar.Controls.Add(btnSpareParts);
             pnlSidebar.Controls.Add(btnRepairs);
             pnlSidebar.Controls.Add(btnMechanics);
             pnlSidebar.Controls.Add(btnServiceRequests);
@@ -114,7 +116,7 @@
             btnDashboard.FlatStyle = FlatStyle.Flat;
             btnDashboard.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(15, 120);
+            btnDashboard.Location = new Point(15, 130);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Padding = new Padding(15, 0, 0, 0);
             btnDashboard.Size = new Size(210, 42);
@@ -132,7 +134,7 @@
             btnBilling.FlatStyle = FlatStyle.Flat;
             btnBilling.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBilling.ForeColor = Color.White;
-            btnBilling.Location = new Point(15, 485);
+            btnBilling.Location = new Point(15, 490);
             btnBilling.Name = "btnBilling";
             btnBilling.Padding = new Padding(15, 0, 0, 0);
             btnBilling.Size = new Size(210, 42);
@@ -140,24 +142,6 @@
             btnBilling.Text = "Billing";
             btnBilling.TextAlign = ContentAlignment.MiddleLeft;
             btnBilling.UseVisualStyleBackColor = true;
-            // 
-            // btnSpareParts
-            // 
-            btnSpareParts.Cursor = Cursors.Hand;
-            btnSpareParts.FlatAppearance.BorderSize = 0;
-            btnSpareParts.FlatAppearance.MouseDownBackColor = Color.DarkCyan;
-            btnSpareParts.FlatAppearance.MouseOverBackColor = Color.Teal;
-            btnSpareParts.FlatStyle = FlatStyle.Flat;
-            btnSpareParts.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSpareParts.ForeColor = Color.White;
-            btnSpareParts.Location = new Point(15, 435);
-            btnSpareParts.Name = "btnSpareParts";
-            btnSpareParts.Padding = new Padding(15, 0, 0, 0);
-            btnSpareParts.Size = new Size(210, 42);
-            btnSpareParts.TabIndex = 3;
-            btnSpareParts.Text = "Spare Parts";
-            btnSpareParts.TextAlign = ContentAlignment.MiddleLeft;
-            btnSpareParts.UseVisualStyleBackColor = true;
             // 
             // btnRepairs
             // 
@@ -168,7 +152,7 @@
             btnRepairs.FlatStyle = FlatStyle.Flat;
             btnRepairs.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRepairs.ForeColor = Color.White;
-            btnRepairs.Location = new Point(15, 385);
+            btnRepairs.Location = new Point(15, 430);
             btnRepairs.Name = "btnRepairs";
             btnRepairs.Padding = new Padding(15, 0, 0, 0);
             btnRepairs.Size = new Size(210, 42);
@@ -186,7 +170,7 @@
             btnMechanics.FlatStyle = FlatStyle.Flat;
             btnMechanics.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMechanics.ForeColor = Color.White;
-            btnMechanics.Location = new Point(15, 335);
+            btnMechanics.Location = new Point(15, 370);
             btnMechanics.Name = "btnMechanics";
             btnMechanics.Padding = new Padding(15, 0, 0, 0);
             btnMechanics.Size = new Size(210, 42);
@@ -205,7 +189,7 @@
             btnServiceRequests.FlatStyle = FlatStyle.Flat;
             btnServiceRequests.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnServiceRequests.ForeColor = Color.White;
-            btnServiceRequests.Location = new Point(15, 285);
+            btnServiceRequests.Location = new Point(15, 310);
             btnServiceRequests.Name = "btnServiceRequests";
             btnServiceRequests.Padding = new Padding(15, 0, 0, 0);
             btnServiceRequests.Size = new Size(210, 42);
@@ -225,7 +209,7 @@
             btnVehicles.FlatStyle = FlatStyle.Flat;
             btnVehicles.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVehicles.ForeColor = Color.White;
-            btnVehicles.Location = new Point(15, 235);
+            btnVehicles.Location = new Point(15, 250);
             btnVehicles.Name = "btnVehicles";
             btnVehicles.Padding = new Padding(15, 0, 0, 0);
             btnVehicles.Size = new Size(210, 42);
@@ -244,7 +228,7 @@
             btnCustomers.FlatStyle = FlatStyle.Flat;
             btnCustomers.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCustomers.ForeColor = Color.White;
-            btnCustomers.Location = new Point(15, 185);
+            btnCustomers.Location = new Point(15, 190);
             btnCustomers.Name = "btnCustomers";
             btnCustomers.Padding = new Padding(15, 0, 0, 0);
             btnCustomers.Size = new Size(210, 42);
@@ -316,24 +300,24 @@
             dgvVehicles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvVehicles.BackgroundColor = Color.White;
             dgvVehicles.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.DarkSlateGray;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dgvVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.DarkSlateGray;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvVehicles.ColumnHeadersHeight = 35;
             dgvVehicles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Teal;
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvVehicles.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Teal;
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvVehicles.DefaultCellStyle = dataGridViewCellStyle4;
             dgvVehicles.Location = new Point(290, 180);
             dgvVehicles.MultiSelect = false;
             dgvVehicles.Name = "dgvVehicles";
@@ -395,6 +379,35 @@
             lblCustomersTitle.TabIndex = 13;
             lblCustomersTitle.Text = "Vehicles";
             // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button1.BackColor = Color.DarkSlateGray;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Firebrick;
+            button1.FlatAppearance.MouseOverBackColor = Color.IndianRed;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(15, 579);
+            button1.Name = "button1";
+            button1.Padding = new Padding(15, 0, 0, 0);
+            button1.Size = new Size(210, 42);
+            button1.TabIndex = 8;
+            button1.Text = "Logout";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            panel1.BackColor = Color.Gainsboro;
+            panel1.Location = new Point(20, 570);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 1);
+            panel1.TabIndex = 7;
+            // 
             // VehiclesForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -427,7 +440,6 @@
         private Panel pnlLogoutDivider;
         private Button btnDashboard;
         private Button btnBilling;
-        private Button btnSpareParts;
         private Button btnRepairs;
         private Button btnMechanics;
         private Button btnServiceRequests;
@@ -442,5 +454,7 @@
         private TextBox txtSearchVehicle;
         private Label lblCustomersSubtitle;
         private Label lblCustomersTitle;
+        private Button button1;
+        private Panel panel1;
     }
 }
